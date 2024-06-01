@@ -18,7 +18,7 @@ module sales_record::sales_record_test{
         let product_description = string::utf8(b"Tasty snack for a hungry beast, yum yum! :)");
         let product_price : u64 = 300;
         sales_record::add_record(
-            account_address,
+            arg1,
             product_name,
             product_description,
             product_price
