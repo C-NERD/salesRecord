@@ -64,8 +64,10 @@ module sales_record::sales_record{
         });
     }
 
-    public fun add_record(account_address : address, name : string::String, description : string::String, price : u64) acquires Records {
+    public fun add_record(account : &signer, name : string::String, description : string::String, price : u64) acquires Records {
         
+        let account_address = signer::address_of(account);
+
         // make sure that name is not longer 20 characters and description is not longer than 60 characters
         assert!(string::length(&name) <= 20, error::invalid_state(EINDEX_OUT_OF_RANGE));
         assert!(string::length(&description) <= 60, error::invalid_state(EINDEX_OUT_OF_RANGE));
