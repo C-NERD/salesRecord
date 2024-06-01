@@ -4,9 +4,10 @@ version = "1.0.0"
 authors = ["cnerd"]
 
 [addresses]
-sales_record = "0x1010"
+sales_record = "_"
 
 [dev-addresses]
+sales_record = "0x1010"
 
 [dependencies.AptosFramework]
 git = "https://github.com/aptos-labs/aptos-core.git"
