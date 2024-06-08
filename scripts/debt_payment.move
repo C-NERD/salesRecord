@@ -2,8 +2,8 @@ script {
     use sales_record::sales_record;
     use std::signer;
     use std::string;
-    use aptos_std::aptos_coin::{ AptosCoin };
-    use aptos_std::coin::{ transfer };
+    use aptos_framework::aptos_coin::{ AptosCoin };
+    use aptos_framework::coin::{ transfer };
 
     fun main(signer : &signer, seller : address) {
         
